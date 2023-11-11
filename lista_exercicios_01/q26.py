@@ -1,0 +1,12 @@
+matricula1 = int(input("Digite a matrícula do funcionário 1: "))
+horas_trabalhadas1 = float(input("Digite o número de horas trabalhadas: "))
+valor_por_hora1 = float(input("Digite o valor que recebe por hora: "))
+matricula2 = int(input("Digite a matrícula do funcionário 2: "))
+horas_trabalhadas2 = float(input("Digite o número de horas trabalhadas: "))
+valor_por_hora2 = float(input("Digite o valor que recebe por hora: "))
+salario1 = horas_trabalhadas1 * valor_por_hora1
+salario2 = horas_trabalhadas2 * valor_por_hora2
+print(f"MATRICULA = {matricula1}")
+print(f"SALARIO = R$ {salario1:.2f}")
+print(f"MATRICULA = {matricula2}")
+print(f"SALARIO = R$ {salario2:.2f}")
