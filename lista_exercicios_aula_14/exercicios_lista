@@ -1,0 +1,30 @@
+pilha = list(range(1, 6))
+
+def exibir_pilha():
+    print("Pilha:", pilha)
+    print("Tamanho da pilha:", len(pilha))
+
+while True:
+    print("\nOpções:")
+    print("E - Empilhar um novo prato")
+    print("D - Desempilhar um prato")
+    print("S - Sair do sistema")
+
+    opcao = input("Escolha uma opção (E/D/S): ").upper()
+
+    if opcao == 'E':
+        novo_prato = len(pilha) + 1
+        pilha.append(novo_prato)
+        exibir_pilha()
+    elif opcao == 'D':
+        if pilha:
+            prato_removido = pilha.pop()
+            print("Prato", prato_removido, "foi desempilhado.")
+            exibir_pilha()
+        else:
+            print("A pilha está vazia. Nenhum prato para desempilhar.")
+    elif opcao == 'S':
+        print("Saindo do sistema. Até logo!")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")

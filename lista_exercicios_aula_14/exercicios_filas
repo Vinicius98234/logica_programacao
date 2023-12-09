@@ -1,0 +1,31 @@
+fila = list(range(1, 11))
+
+def exibir_fila():
+    print("Fila:", fila)
+    print("Tamanho da fila:", len(fila))
+
+while True:
+    print("\nOpções:")
+    print("F - Adicionar alguém ao fim da fila")
+    print("A - Atender uma pessoa")
+    print("S - Sair do sistema")
+
+    opcao = input("Escolha uma opção (F/A/S): ").upper()
+
+    if opcao == 'F':
+        novo_ticket = len(fila) + 1
+        fila.append(novo_ticket)
+        exibir_fila()
+    elif opcao == 'A':
+        if fila:
+            pessoa_atendida = fila.pop(0)
+            print("Pessoa", pessoa_atendida, "foi atendida.")
+            exibir_fila()
+        else:
+            print("A fila está vazia. Ninguém para atender.")
+    elif opcao == 'S':
+        print("Saindo do sistema. Até logo!")
+        break
+    else:
+        print("Opção inválida. Tente novamente.")
+
